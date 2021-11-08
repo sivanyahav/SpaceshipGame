@@ -42,7 +42,6 @@
 ניתן לראות שבהתאם לכמות החיים שיש, הוא בודק כמה לבבות צריכים להופיע, ואם נגמרים  החיים הוא דואג להעביר לסצינה של הפסד המשחק ולהרוס את אובייקט החללית.
 ניתן לראות את הסקריפט [כאן](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/Scripts/3-collisions/GameControlScript.cs).
 
-**לחצו [כאן](https://s-k-games.itch.io/spaceshipggame) כדי לשחק במשחק
-,תהנו !! :)**
+**לחצו [כאן](https://s-k-games.itch.io/spaceshipggame) כדי לשחק במשחק, תהנו !! :)**
 </div>
 
