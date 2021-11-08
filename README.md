@@ -20,15 +20,21 @@
 אצלי במשחק לשחקן יש 3 פסילות אפשריות שרק בפעם השלישית השחקן יפסיד.
 את השינוי הזה ביצעתי על ידי חלוקת הפונקציה DestroyOnTriggier ל3 פונקציות שונות שפועלות בנפרד על הלייזר, על אובייקט הלב (אסביר עליו בהמשך) ועל החללית.
 ניתן לראות את הסקריפטים הבאים כאן:
-[לייזר](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/DestroyLaser.cs) - שאחראי על כך שכשהלייזר פוגע באוייב שניהם נהרסים. 
+ 
+[לייזר](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/DestroyLaser.cs) - שאחראי על כך שכשהלייזר פוגע באוייב שניהם נהרסים.
+ 
 [לב](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/DestroyHeart.cs) - מה שהסקריפט עושה זה לדאוג שהאובייקט של הלב יהרס כאשר יש טריגר ובנוסף מפעיל את הסקריפט GameControlScript שאחרי על כמות הלבבות במשחק.
+ 
 [חללית](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs)- בסקריפט של החללית השינוי שנעשה הוא שהאובייקט היחידי שנהרס הוא האוייב ולא החללית עצמה, על הריסת החללית אחראי הסקריפט GameControlScript.
 
 בנוסף לשינויים ביצעתי תוספות משלי שלא היו קודם לכן:
+ 
 1. ישנה אופציה חדשה לתפוס לב זהב שמזכה את השחקן בחיים נוספים שמתווספים לו .
 השתמשתי במתזמן של המרצה על מנת שכל פעם יופיע הלב בזמן רנדומלי
 ללב הזהב יש סקריפט כך שכאשר פוגעים בו עם החללית מה שקורה זה שמופעל הסקריפט [הבא](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/Scripts/3-collisions/HeartScript.cs)  שמפעיל סקריפט אחר שדואג שכמות הלבבות על המסך תגדל ב1.
+ 
 2.  הוספתי סצינה חדשה שהיא [loseTheGame](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/Scenes/4-levels/loseTheGame.unity), השחקן מגיע אליה כאשר איבד את כל החיים שלו.
+ 
 3. הוספתי על המסך לבבות שכאשר השחקן פוגע באויב נמחק לב וכאשר הוא זוכה בלב זהב מתווסף לשם לב.
 הלבבות מסמנים בעצם את כמות החיים שנותרו לשחקן. 
 
