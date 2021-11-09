@@ -1,7 +1,7 @@
 
 
 <div dir="rtl" lang="he">
-
+ 
 
 # SpaceshipGame
 
@@ -11,21 +11,22 @@
  במהלך המשחק השחקן צובר נקודות על ידי פגיעה באויבים.
  כדי לנצח, על השחקן להצליח להגיע לחץ שנמצא במסך. 
 
-השינויים שעשיתי בקוד של המרצה הם : 
-1. בסקריפט keyBoardSpawner הוספתי תנאי של זמן .
+השינויים שעשיתי בקוד של המרצה הם :
+ 
+ 1. בסקריפט keyBoardSpawner הוספתי תנאי של זמן .
 כלומר, השחקן יוכל לירות חץ לייזר רק אם עברה חצי שניה מהרגע שירה את החץ הקודם לעומת המשחק המקורי שבו יכל לירות השחקן ללא הגבלת זמן.
 ניתן לראות את הסקריפט החדש בלחיצה [כאן](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/Scripts/2-spawners/KeyboardSpawner.cs). 
 
-2. במשחק הקודם השחקן היה נפסל לאחר פעם אחת שפגעה בו החללית,
+ 2. במשחק הקודם השחקן היה נפסל לאחר פעם אחת שפגעה בו החללית,
 אצלי במשחק לשחקן יש 3 פסילות אפשריות שרק בפעם השלישית השחקן יפסיד.
 את השינוי הזה ביצעתי על ידי חלוקת הפונקציה DestroyOnTriggier ל3 פונקציות שונות שפועלות בנפרד על הלייזר, על אובייקט הלב (אסביר עליו בהמשך) ועל החללית.
 ניתן לראות את הסקריפטים הבאים כאן:
  
- [לייזר](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/DestroyLaser.cs) - שאחראי על כך שכשהלייזר פוגע באוייב שניהם נהרסים.
+  [לייזר](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/DestroyLaser.cs) - שאחראי על כך שכשהלייזר פוגע באוייב שניהם נהרסים.
  
- [לב](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/DestroyHeart.cs) - מה שהסקריפט עושה זה לדאוג שהאובייקט של הלב יהרס כאשר יש טריגר ובנוסף מפעיל את הסקריפט GameControlScript שאחרי על כמות הלבבות במשחק.
+  [לב](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/DestroyHeart.cs) - מה שהסקריפט עושה זה לדאוג שהאובייקט של הלב יהרס כאשר יש טריגר ובנוסף מפעיל את הסקריפט GameControlScript שאחרי על כמות הלבבות במשחק.
  
- [חללית](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs)- בסקריפט של החללית השינוי שנעשה הוא שהאובייקט היחידי שנהרס הוא האוייב ולא החללית עצמה, על הריסת החללית אחראי הסקריפט GameControlScript.
+  [חללית](https://github.com/sivanyahav/SpaceshipGame/blob/master/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs)- בסקריפט של החללית השינוי שנעשה הוא שהאובייקט היחידי שנהרס הוא האוייב ולא החללית עצמה, על הריסת החללית אחראי הסקריפט GameControlScript.
 
 בנוסף לשינויים ביצעתי תוספות משלי שלא היו קודם לכן:
  
