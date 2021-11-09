@@ -16,19 +16,8 @@ public class DestroyOnTrigger2D : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == triggeringTag && enabled) {
-            //if(this.tag =="Player"){
                 GameControlScript.health -= 1;
                 Destroy(other.gameObject);
-            //}
-            // if(this.tag == "LaserWithScoreAder"){
-            //     Destroy(other.gameObject);
-            //     GameControlScript.health -= 1;
-            // }
-            // else{
-            //     Destroy(this.gameObject);
-            // }
-            //Destroy(other.gameObject)
-           
         }
     }
 }
